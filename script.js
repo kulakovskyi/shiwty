@@ -50,6 +50,59 @@ if(animItems.length > 0) {
 
 }
 
+/*********************popup***************************/
 
+const popLockBody = document.querySelectorAll('.pop-lock-body');
+const popupArea = document.querySelector('.popup__area');
+const popupClose = document.querySelector('.popup__close');
+
+for(item of popLockBody){
+  item.addEventListener("click",function(e){
+    document.body.classList.add('_lock');
+  });
+}
+
+popupArea.addEventListener("click",function(e){
+	document.body.classList.remove('_lock');
+});
+
+popupClose.addEventListener("click",function(e){
+	document.body.classList.remove('_lock');
+});
+
+
+
+/*********************** FORM VALID******************/
+
+let form = document.querySelector('.js-form');
+let formInputs = document.querySelectorAll('.js-input');
+let check = document.querySelector('.js-check');
+let checkLabel = document.querySelector('.label__check');
+
+
+
+form.onsubmit = function(){
+  emptyInputs = Array.from(formInputs).filter(input => input.value === '');
+
+  formInputs.forEach(function(input){
+    if(input.value !== ''){
+      input.classList.add('_valid');
+      input.classList.remove('_not-valid');
+    } else{
+      input.classList.remove('_valid');
+      input.classList.add('_not-valid');
+    }
+
+  })
+
+
+  if ((emptyInputs.length !== 0)||(!check.checked)) {
+    console.log('inputs not filled');
+    return false;
+  }else{
+    document.body.classList.remove('_lock');
+  }
+
+}
 
 

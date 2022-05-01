@@ -45,7 +45,9 @@
                 </li>
               </ul>
             </nav>
-            <a href="#" class="header__btn">Завантажити</a>
+            <a href="#popup__block" class="header__btn pop-lock-body"
+              >Завантажити</a
+            >
             <div class="burger">
               <div class="menu__icon">
                 <span></span>
@@ -65,7 +67,7 @@
             </p>
             <a
               href="#popup__block"
-              class="music__btn partners__pop _anim-items _anim-no-hide"
+              class="music__btn pop-lock-body _anim-items _anim-no-hide"
             >
               <img src="img/music-btn.png" alt="play" />
               Дізнатись більше</a
@@ -211,6 +213,55 @@
                 <img src="img/footer/insta.png" alt="facebook" />
               </a>
             </div>
+          </div>
+        </div>
+        <div class="popup__block" id="popup__block">
+          <a href="#" class="popup__area"></a>
+          <div class="popup__hello">
+            <a href="#" class="popup__close">
+              <img src="img/close.png" alt="close" />
+            </a>
+            <p class="popup__title">Cлухайте дійсно якісну музику!</p>
+            <form action="#" class="form js-form">
+              <div class="selected">
+                <select name="pocket" id="pocket">
+                  <option value="1">Базовий 100 грн/ місяць</option>
+                  <option value="1">Меломан 300 грн/ місяць</option>
+                  <option value="1">Меломан + 500 грн/ місяць</option>
+                </select>
+              </div>
+              <label for="name">Ваше ім’я</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="popup js-input"
+                placeholder="П.І.Б"
+              />
+              <label for="email">Ваш e-mail</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="popup js-input"
+                placeholder="Наприклад, user.name@gmail.com"
+              />
+              <div class="checkbox__pop">
+                <input
+                  type="checkbox"
+                  name="check"
+                  id="check"
+                  class="js-check"
+                />
+                <label for="check" class="label__check"
+                  >Погоджуюсь з <span>умовами сервісу</span></label
+                >
+              </div>
+
+              <button type="submit" class="popup__form__button">
+                Зареєструватись
+              </button>
+            </form>
           </div>
         </div>
       </footer>
